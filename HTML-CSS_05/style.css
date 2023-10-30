@@ -1,0 +1,254 @@
+/* ul'nin icerisindeki languages class'i */
+ul.languages {
+  /* liste isaretlerini cember yapar */
+  list-style-type: circle;
+
+  /* listenin isaretlerini kare yapar */
+  list-style-type: square;
+
+  /* listenin isaretlerini latin harfleri yapar(a,b,c...) */
+  list-style-type: lower-latin;
+
+  /* listenin isaretlerini kaldirir */
+  list-style-type: none;
+
+  /*  default gelen liste isareti */
+  list-style-type: disc;
+
+  /* Fontawesome'dan icon'u indirip img klasorune attik oradan da icon'u kullandik */
+  list-style-image: url("./img/house-solid.svg");
+
+  /* liste isaretlerini padding alanının icerisine alir(pesticide eklentisi ile bakarsan daha anlasilir olur)*/
+  /* iconlari iceri alir */
+  list-style-position: inside;
+  /* padding: 0px; */
+
+  list-style-position: outside;
+}
+
+ul.languages li {
+  background-color: green;
+  margin: 6px;
+  width: 200px;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+
+ul.languages li:hover {
+  /* background-color: aqua; */
+  opacity: 0.5;
+
+  /* mouse'in el isareti olarak gelmesi icin */
+  cursor: pointer;
+}
+
+/* h2'nin icerisinde olan i'leri(fontawesome) renk degistirdik */
+h2 i {
+  color: violet;
+}
+
+/* Fontawesome'dan aldigimiz iconlarin class'ina gore de css verebiliriz */
+.fa-kiwi-bird {
+  color: blue;
+  font-size: 23px;
+}
+
+/*!----- PSEUDO CLASSES ----*/
+
+/* ilk eleman */
+ul.pseudo li:first-child {
+  color: red;
+}
+
+/* son eleman */
+ul.pseudo li:last-child {
+  color: yellow;
+}
+
+/* listeden istedigimiz elemani bu sekil secebiliriz */
+ul.pseudo li:nth-child(3) {
+  background-color: grey;
+}
+
+/* tek elemanlar */
+ul.pseudo li:nth-child(odd) {
+  background-color: violet;
+}
+
+/* cift elemanlar */
+ul.pseudo li:nth-child(even) {
+  background-color: paleturquoise;
+}
+
+/* son gelen ezer ---start--- */
+
+/* uzerine tiklanildigi zaman ne olacagini ayarliyoruz */
+ul.pseudo li:active {
+  color: white;
+  background-color: green;
+}
+
+/* mouse ile uzerine gelindigi zaman ne olacagini ayarliyoruz */
+ul.pseudo li:hover {
+  color: orange;
+  background-color: darkorchid;
+}
+
+/* son gelen ezer ---end--- */
+
+/* input aktif hale geldiginde */
+input:focus {
+  background-color: tomato;
+  color: white;
+
+  /* 4px noktalı beyaz */
+  border: 4px dotted white;
+
+  /* dis cizgiyi kaldirir */
+  outline: none;
+}
+
+/*!------ LINK PSEUDO CLASSES -------*/
+
+/* ziyaret edilmemiş link */
+nav.link a:link {
+  color: red;
+}
+
+/* ziyaret edilmis */
+nav.link a:visited {
+  color: magenta;
+}
+
+/* mouse ile tıklandigi sure boyunca */
+nav.link a:active {
+  color: lightseagreen;
+}
+
+/* ustune gelindigi zaman */
+nav.link a:hover {
+  color: orange;
+}
+
+/* genel kullanim ---start--- */
+nav.link a {
+  color: orange;
+  text-decoration: none;
+}
+nav.link a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+/* genel kullanim ---end--- */
+
+nav.cw a {
+  text-decoration: none;
+  border: 2px solid darkorange;
+  padding: 5px;
+
+  /* inline element */
+  margin: 10px;
+
+  color: darkorange;
+  border-radius: 10px;
+}
+
+nav.cw a:hover {
+  background-color: gray;
+  color: white;
+}
+
+/* a'nın hover'inde sadece "i"(icon) degissin istiyorsam */
+nav.cw a:hover i {
+  color: red;
+}
+
+/* ------ICONS------START */
+/* nav'in icerisindeki "a"'larin icerisindeki "i" */
+nav.cw a i {
+  /* icon ile yazilarin arasini acmis olduk */
+  margin: 5px;
+  /* iconlar büyümüs oldu */
+  font-size: 1.3rem;
+  color: gray;
+}
+
+/* sadece 'icon' üstüne gelindigi zaman aktif olur */
+nav.cw a i:hover {
+  color: magenta;
+}
+/* ------ICONS------END */
+
+span {
+  background-color: gray;
+
+  /* eğer inline block yaparsak margin'den etkilenir */
+  display: inline-block;
+  margin: 10px;
+  margin-top: 25px;
+}
+
+#par {
+  /* normalde alt satırda gozukur cunku block element ama inline yaptigimiz icin digerlerinin yanına kaydı */
+  display: inline;
+  background-color: aqua;
+}
+
+/*!------ PSEUDO ELEMENTS -------*/
+
+/* p-elements class'ının ilk satirina mudahale */
+.p-elements::first-line {
+  color: red;
+}
+/* ilk harf */
+.p-elements::first-letter {
+  font-size: 35px;
+}
+
+/* BEFORE-AFTER ELEMENTS */
+
+ul.before-after {
+  /* bastaki noktalari kaldirdik */
+  list-style-type: none;
+}
+
+ul.before-after li {
+  /* liste elemenlarinin arasini actik */
+  margin: 0.5rem;
+  background-color: antiquewhite;
+  width: 50%;
+  border-radius: 10px;
+  /* saga yaslamak istersek */
+  /* text-align: right; */
+}
+ul.before-after li:hover {
+  background-color: blueviolet;
+}
+
+/* class'i ''before-after'' olan ul'nin li'sinin oncesine */
+ul.before-after li::before {
+  /* windows+'.' */
+  content: "🎈";
+  /* empojiye margin verdik(yazidan uzaklastirdik) */
+  margin: 10px;
+}
+
+/* class'i ''before-after'' olan ul'nin 2.li'sinin oncesine */
+ul.before-after li:nth-child(2)::before {
+  /* windows+'.' */
+  content: "🚗";
+}
+ul.before-after li:nth-child(3)::before {
+  /* google>unicode emoji>istedigin emojiyi sec>css code kopyala */
+  content: "\1F381";
+}
+ul.before-after li:nth-child(3):hover::after {
+  /* hover'ine(ustune gelindiginde) sonuna emoji ekledik */
+  content: "🍬";
+}
+ul.before-after li:last-child::after {
+  /* son elemanin sonuna ekledik */
+  content: "🍔";
+  /* biraz uzaklastirdik */
+  margin: 10px;
+}

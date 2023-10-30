@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formlar</title>
+  </head>
+  <body>
+    <h1>Forms</h1>
+
+    <form action="">
+      <!------------------- Name (TEXT) ------------------->
+      <section>
+        <!-- label'deki for="name" ve input'daki id="name" olursa yani aynı olurlarsa Name'e tıkladığımız zaman otomatik focuslanır-->
+
+        <!-- name="name" backend'e gidecek değişken -->
+        <!-- input'ın içine value="Berk" yazarsan kullanıcı Berk yazısını görür -->
+        <!-- value="Berk" yazmak mantıklı değil örnek olsun diye yazdım girdi olarak ne yazılırsa value girilen girdi olur-->
+        <!-- backend'e name=Berk olarak gider çünkü name='name' yazdık-->
+        <!-- required form'un boş gönderilmesini engeller -->
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+      </section>
+      <br />
+
+      <!------------------- EMAIL ------------------->
+      <section>
+        <!-- for ve id'ye aynı ismi verdiğimiz için birbirlerine bağlandılar  -->
+        <!-- placeholder kullanıcının mail gireceği yere silik şekilde yazı yazdırırır -->
+        <label for="email">EMAIL</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="isim@mail.com"
+        />
+      </section>
+      <br />
+
+      <!------------------- PASSWORD ------------------->
+      <section>
+        <!-- name ve for'u bağladık -->
+        <!-- name=password olduğu için backend'e o şekilde gider -->
+        <!-- minlength="8" 8den az karakter girilmesini engeller -->
+        <!-- maxlength="20" 20'den fazla karakter girilmesini engeller -->
+        <label for="password">PASSWORD</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          placeholder="en az 8 karakter giriniz"
+          minlength="8"
+          maxlength="20"
+        />
+      </section>
+      <br />
+
+      <!------------------- AGE (NUMBER) ------------------->
+      <section>
+        <!-- type=number yaptığımız için sadece sayısal değer kabul eder -->
+        <!-- min="0" yaptığımız için 0'dan aşağı sayı girilemez -->
+        <label for="age">AGE</label>
+        <input type="number" name="age" id="age" required min="0" max="100" />
+      </section>
+      <br />
+
+      <!------------------- BUTTONS ------------------->
+      <section>
+        <!-- input'un type'ını submit yaparsak otomatik gönder butonuna dönüşür (tarayıcının diline göre gönder yazar) -->
+        <!-- sil butonunun type'ını reset yaptığımız için silme butonuna dönüştü -->
+        <input type="submit" />
+        <button type="reset">Sil</button>
+      </section>
+      <br />
+
+      <!------------------- GENDERS (RADIO) ------------------->
+      <section>
+        <!-- en üstteki for'u boş bıraktım çünkü 'Gender'a tıklandığı zaman Female ya da Male'e gitmesini istemiyorum -->
+        <label for="">Gender:</label>
+        <br />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" />
+        <br />
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" />
+        <br />
+        <label for="helicopter">Attack Helicopter</label>
+        <input type="radio" name="gender" id="helicopter" />
+        <br />
+        <label for="supra">Toyota Supra</label>
+        <input type="radio" name="gender" id="supra" />
+      </section>
+      <br />
+
+      <!------------------- LANGUAGE (CHECKBOX) ------------------->
+      <section>
+        <!-- checked = otomatik seçili olarak gelecek seçeneğe koyulur -->
+        <!-- id kullanmasak da olur ama id ile istersek style verebiliriz ya da backend'de bu elementi okumamız gerekirse id ile okuyoruz -->
+        <!-- türkçe,ingilizce... ve diğerlerini label ile yazsaydık eğer örneğin Türkçe'ye tıkladığımız zaman otomatik checkbox'ı seçecekti -->
+        <label for="">LANGUAGES:</label>
+        <br />
+        <input
+          type="checkbox"
+          name="languages"
+          value="Turkce"
+          id="languages"
+          checked
+        />Türkçe
+        <br />
+        <input
+          type="checkbox"
+          name="languages"
+          value="English"
+          id="languages"
+        />English
+        <br />
+        <input
+          type="checkbox"
+          name="languages"
+          value="Dutch"
+          id="languages"
+        />Dutch
+        <br />
+      </section>
+      <br />
+
+      <!------------------- DATE ------------------->
+      <section>
+        <label for="dob">DATE OF BIRTH</label>
+        <input type="date" name="dob" id="dob" min="1990-01-01" />
+      </section>
+      <br />
+
+      <!------------------- SELECT(dropdown menu?) ------------------->
+      <section>
+        <label for="">Favori Tatlilar</label>
+        <select name="tatli" id="tatli">
+          <optgroup label="Sütlü Tatlilar">
+            <option value="sutlac">Sütlaç</option>
+            <option value="kazandibi">Kazandibi</option>
+          </optgroup>
+
+          <optgroup label="Şerbetli Tatlilar">
+            <option value="kunefe">Künefe</option>
+            <option value="havuc_dilimi">Havuç Dilimi</option>
+          </optgroup>
+        </select>
+      </section>
+      <br />
+
+      <!------------------- TEXTAREA ------------------->
+      <section>
+        <!-- cols = genişlik -->
+        <!-- rows = uzunluk -->
+        <!-- style="resize:none" yorum girilen yerin sağ alt köşeden tutulup küçültülüp büyültülmesini engeller -->
+        <label for="yorum">Yorumlarinizi giriniz</label>
+        <br />
+        <textarea
+          name="yorum"
+          id="yorum"
+          cols="35"
+          rows="12"
+          style="resize: none"
+          maxlength="100"
+          placeholder="En Fazla 100 karekter girilebilir"
+        ></textarea>
+      </section>
+    </form>
+  </body>
+</html>

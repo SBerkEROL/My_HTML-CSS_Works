@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iframe</title>
+  </head>
+  <body>
+    <div>
+      <!-- haritayı almak için google haritalar>paylaş>harita yerleştirme>iframe kopyala -->
+      <!-- sayfanın tamamını kaplamak için %100 verdik with'e -->
+      <!-- allowfullscreen="false" olursa eğer büyütüp küçültme özelliğini kaybeder -->
+      <!-- loading="lazy" olduğu zaman sayfa açılır açılmaz her şeyi yüklemiyor sonradan yüklüyor sayfayı yavaşlatmamak için -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d311922.4368052011!2d4.5743283133339245!3d52.35420707772781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam!5e0!3m2!1str!2snl!4v1695835876317!5m2!1str!2snl"
+        width="600"
+        height="300"
+        style="border: 2"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <br /><br />
+      <!-- youtube>videoyu aç>paylaş>yerleştir>iframe kopyala -->
+      <!-- allowfullscreen = videoyu tam ekran yapabilmek için,silinirse video çalışır ama tam ekran yapma özelliği devre dışı kalır -->
+      <iframe
+        width="600"
+        height="300"
+        src="https://www.youtube.com/embed/X6z2G4cRwdQ?si=5mM2AyINMz7w-H5Z"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <br /><br /><br />
+    <div>
+      <!-- controls kullanmazsak eğer içerik gözükmez -->
+      <audio controls src="./assets/Memleketim.mp3" style="width: 600px">
+        Dinle
+      </audio>
+    </div>
+    <div>
+      <video controls src="./assets/Su.mp4">Oynat</video>
+    </div>
+  </body>
+</html>

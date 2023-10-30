@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      /* text-align: center; = textleri ortalamayı sağlar */
+      body {
+        text-align: center;
+      }
+      img {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML-CSS DENEME</h1>
+    <!-- <nav> = navigasyon,üstteki menünün olduğu yer-->
+    <!-- '../' = bir üst klasöre geçmek için kullanılır -->
+    <nav>
+      <a href="index.html">Home</a>
+      <!--  target="_black" = link'i yeni sekmede açmayı sağlar-->
+      <a href="#courses">Courses</a>
+      <a href="#students">Student</a>
+      <a href="contact.html" target="_blank">Contact</a>
+    </nav>
+    <!-- içerik girmek için asıl baş etiketimiz <main> -->
+    <!-- <main> içerisinde içerik girmek,alt görevler için <section> kullanılabilir -->
+    <br /><br /><br />
+    <main>
+      <section id="courses">
+        <h2>COURSES</h2>
+        <article>Fullstack</article>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
+          voluptate autem sint aliquid voluptatum odio neque beatae numquam,
+          saepe eos libero eum consequuntur ipsa sunt, qui soluta non, accusamus
+          expedita?
+        </p>
+        <article>DATA-SCIENCE</article>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
+          repellat totam, assumenda dolore mollitia expedita qui quod quia sequi
+          nihil ipsum voluptates omnis. Velit repellendus cupiditate atque
+          voluptatem, voluptates nihil.
+        </p>
+        <article>SALESFORCE</article>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. A illum
+          soluta voluptatem voluptate excepturi minima harum quisquam vitae
+          itaque assumenda fugiat, provident saepe doloribus, repellat ex ipsam
+          nulla, quo eveniet tempore magni sint quis. Sint dignissimos eos
+          corrupti repellendus nesciunt odio, maxime, at eaque commodi id cumque
+          aliquam doloribus? Nam!
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
+          suscipit rem sit blanditiis, enim ullam doloremque officia.
+          Reprehenderit ab est modi eius fugiat! Ex commodi provident tenetur
+          recusandae! Necessitatibus similique cumque distinctio ipsa, facere
+          quaerat. Totam, neque velit accusamus reiciendis a quaerat nulla magni
+          quae assumenda earum cupiditate facilis consequuntur et quas commodi
+          praesentium fugiat ducimus dolores laudantium sunt. Laborum quisquam,
+          voluptas laudantium alias nesciunt neque corrupti! Ab iure provident
+          omnis sequi veritatis. Provident earum laudantium, possimus
+          necessitatibus maxime est rerum. Quam, eaque dicta. Modi, illum
+          eveniet consequuntur rem impedit ex corporis quod, quidem asperiores,
+          expedita harum culpa tenetur animi.
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt quo
+          ducimus sequi, quibusdam veniam ad, ipsam maiores molestias magni est
+          laboriosam minus deleniti, voluptatum iusto eveniet? Sapiente iste,
+          corporis accusantium sit similique laborum dolorem temporibus, quia
+          dolor doloremque sequi. Soluta molestiae cumque aperiam est sed
+          voluptatem eveniet nam facilis modi?
+        </p>
+      </section>
+
+      <section id="students">
+        <h2>STUDENTS</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+          voluptatibus quisquam quae itaque id beatae culpa numquam suscipit
+          asperiores enim. Dignissimos debitis accusamus placeat illo dolorem
+          alias fugit possimus vero! Dolores voluptatibus harum saepe optio
+          reiciendis aliquam assumenda, numquam excepturi?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quia
+          consequuntur quidem quis corrupti nemo dignissimos repudiandae porro,
+          consequatur facere nostrum sunt totam ex facilis libero error quo quae
+          tempore minima, blanditiis dolor. Mollitia ipsa iste, distinctio
+          dolore officia omnis qui quae saepe sit. Perspiciatis recusandae culpa
+          corrupti officia molestias.
+        </p>
+        <article>
+          <!-- 'img' yani resim'i <a> </a> tagleri içerisine aldık ve ona bir link verdik -->
+          <a href="https://www.google.com/" target="_blank"
+            ><img
+              src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg"
+              alt="s1"
+          /></a>
+          <a href="https://www.github.com/" target="_blank"
+            ><img
+              src="https://cdn.pixabay.com/photo/2018/01/17/07/06/laptop-3087585_640.jpg"
+              alt="s2"
+          /></a>
+          <div>
+            <!-- download = resmi indirmek için kullanılır -->
+            <a href="./img/sun.jpeg" download>Resmi indirmek için tiklayiniz</a>
+          </div>
+        </article>
+      </section>
+      <br /><br /><br /><br />
+      <section>
+        <div>
+          <!-- mail attırmak için kullanılır -->
+          <a href="mailto:berk@gmail.com">Mail için tiklayiniz</a>
+        </div>
+        <br /><br /><br /><br />
+        <div>
+          <a href="tel:+905096584568">Aramak için tiklayiniz</a>
+        </div>
+      </section>
+
+      <br /><br /><br /><br />
+      <section id="contact">
+        <article></article>
+      </section>
+    </main>
+  </body>
+</html>

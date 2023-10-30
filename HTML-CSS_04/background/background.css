@@ -1,0 +1,91 @@
+body {
+  background-image: linear-gradient(
+      43deg,
+      #4158d0 0%,
+      #c850c0aa 46%,
+      #ffcc70aa 100%
+    ),
+    url(./img/foto1.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+
+  /* ortala */
+  background-size: cover;
+
+  /* arkaplandaki fotoğraf içerik boyunca arkaplanı kaplar */
+  background-attachment: fixed;
+}
+
+.container {
+  /* container'ın neresi olduğunu görmek için border, background color, background fotoğrafı verilir*/
+  border: 2px solid red;
+  width: 20rem;
+  height: 22em;
+  margin: auto;
+
+  /* justify = 2 yana yasladı */
+  text-align: justify;
+
+  padding: 10px;
+
+  /* çerçevenin kenarlarını ovalleştir */
+  border-radius: 10px;
+
+  /* background-image: url(./img/foto1.jpg); */
+
+  /* fotoğrafı sığdırabildiği kadarını sığdırır */
+  /* background-size: cover; */
+
+  /* contain ekrana sığar ama tekrarlı olur bunu önlemek için de no-repat yapılır */
+  /* background-size: contain; */
+  /* background-repeat: no-repeat; */
+
+  /* center =  ortalar, bottom = ortalananı aşağı indirir*/
+  /* background-position: center bottom; */
+
+  /* 60 derece renkler arasında geçiş yap */
+  /* background-image: linear-gradient(60deg, yellow, blue); */
+
+  background-image: linear-gradient(
+      to left,
+      rgba(255, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(./img/foto1.jpg);
+  background-size: cover;
+
+  /* url ile girilen resmi ortala */
+  background-position: center;
+  color: rgb(47, 255, 0);
+}
+
+img {
+  width: 20%;
+}
+
+#img1,
+#img2,
+#img3,
+#img4 {
+  /* hepsinin opaklığını 0.7 yaptık */
+  opacity: 0.7;
+}
+
+#img1:hover,
+#img2:hover,
+#img3:hover,
+#img4:hover {
+  /* mouse üstüne geldiğinde efekt verdik */
+  opacity: 1;
+
+  /* yukarıda fotoğraf büyüklüğünü 20% girmiştik img:hover içerisine 30% yazdığımız için fotoğraflar 30% olarak büyür üstüne gelindiğinde */
+  /* width: 30%; */
+
+  /* anladığım kadarıyla yukarıdakiyle aynı işe yarıyor ne kadar oran verirsek ona göre büyüyor */
+  transform: scale(1.5);
+
+  /* yavaş yavaş büyüsün dersek kaç ms'de gerçekleşeceğini belirlemek için kullanılır */
+  transition: all ease-in-out 500ms;
+  /* 1sn'de büyüsün istiyorsak */
+  transform: all 1s;
+}

@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+
+  /* kutunun genişlemesini önlemek için yapılır - 150px,150px'in dışına çıkma demek */
+  box-sizing: border-box;
+}
+.container {
+  background-color: orange;
+  border: 2px solid red;
+  /* margin: 20px; */
+  margin: 30px;
+  /* padding: 50px; */
+
+  /* box1'le birlikte aşağı gelmesin diye(birbirlerine yapışmamaları için) border ya da padding vermemiz gerekiyor */
+  /* padding: 1px; */
+  border: 1px solid red;
+}
+
+.box1 {
+  background-color: magenta;
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  margin: 50px;
+}
+.box2 {
+  background-color: yellow;
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  padding: 20px;
+}
+.box3 {
+  background-color: blue;
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+}

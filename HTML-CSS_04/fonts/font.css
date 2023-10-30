@@ -1,0 +1,40 @@
+/* googlefonts > istediğin font'u seç > import'unu kopyala */
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&family=Tangerine&display=swap");
+
+.font1 {
+  font-family: "Courier New", Courier, monospace;
+
+  /* yazıları kalınlaştırır */
+  font-weight: 900;
+}
+.font2 {
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  font-size: 1.3rem;
+  font-family: "Tangerine", cursive;
+  background-color: rgba(158, 78, 233, 0.37);
+}
+.font3 {
+  font-family: "Times New Roman", Times, serif;
+
+  /* yazıları büyültür */
+  font-size: 20px;
+
+  /* 100 en ince hali */
+  font-weight: 100;
+
+  /* cümlenin başındaki harfleri büyültür */
+  font-variant: small-caps;--
+}
+.font4 {
+  /* googlefonts > istediğini seç > alt taraftaki Css rule.... kopyala  */
+  /* font-family: "Lobster Two", cursive; */
+}
+.font5 {
+  /* aşağıdaki font-face ile tanımladığımız(font dosyası içerisine indirdiğimiz yeni font) font'u çağırdık ve normalde tarayıcımızda olmayan bir font'a erişmiş oldu */
+  font-family: deneme_font1;
+}
+
+@font-face {
+  font-family: deneme_font1;
+  src: url(./font/SedgwickAveDisplay-Regular.ttf);
+}

@@ -1,0 +1,108 @@
+h1 {
+  /* yazıyı block element içinde ortala */
+  text-align: center;
+  color: blue;
+}
+.container {
+  font-size: 8px;
+}
+#par1 {
+  color: blue;
+
+  /* ortala */
+  text-align: center;
+
+  /* gölgelendirme = X ekseninde 5, Y ekseninde 5 ve blurluğu 2px */
+  text-shadow: 2px 2px 2px red;
+
+  /* yazının türünü değiştirir */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  /* yazıyı kalınlaştırır */
+  font-weight: bold;
+
+  /* yazıyı 3 sütuna böler */
+  column-count: 3;
+
+  /* bölünen yazılar arasına çigiler çeker */
+  column-rule: 3px double red;
+
+  /* yukarıdaki yaptıklarımız diğer tarayıcılarda desteklenmiyor olabilir onun için yazdık */
+  -webkit-column-count: 3;
+  -moz-column-count: 3px double red;
+
+  /* font-size 8px olduğu için çarpı 2 yapıyor
+  2em = 16px(em üst taraftaki taşıyıcıdan etkileniyor), 1rem=16px */
+  font-size: 2em;
+}
+
+#par2 {
+  color: white;
+  padding: 10px;
+
+  /* sağa yasla */
+  text-align: right;
+
+  /* büyük harf yap */
+  text-transform: uppercase;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  /* gölgelendirme = X ekseninde 2, Y ekseninde 2 ve blurluğu 5px */
+  text-shadow: 2px 2px 5px black;
+
+  /* kutu gölgelendirme = X ekseninde 5, Y ekseninde 5 ve blurluğu 5px */
+  box-shadow: 5px 5px 5px black;
+
+  /* kutuyu yuvarlaklaştırma */
+  border-radius: 10px;
+}
+
+#par3 {
+  color: rgb(130, 55, 100);
+
+  /* iki yana yasla */
+  text-align: justify;
+
+  /* altını çiz */
+  text-decoration: underline;
+}
+
+#par4 {
+  /* hue == 0 = kırmızı, 120 = yeşil, 240 = mavi*/
+  /* saturation(doygunluk) */
+  /* lightness(parlaklık) 0 alırsa siyah, 100 alırsa beyaz olur*/
+  color: hsl(0, 100%, 50%);
+
+  /* line-through = üstünü çizer, wavy = dalgalı olarak çizer*/
+  text-decoration: line-through wavy;
+}
+
+#par5 {
+  color: fuchsia;
+
+  /* line-through = yazısının üst kısmını çiz */
+  text-decoration: overline;
+}
+
+#par6 {
+  /* opacity düşürdüm */
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px;
+
+  /* paragraf başında boşluk bırak */
+  text-indent: 1rem;
+
+  /* harfler arasında boşluk */
+  letter-spacing: 4px;
+
+  /* satırlar arası boşluk */
+  line-height: 1.6;
+
+  /* mülakat sorusu */
+  /* rtl = sağdan sola yazdırır */
+  /* bidi-override harfleri tersten yazdırır */
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}

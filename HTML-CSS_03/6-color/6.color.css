@@ -1,0 +1,22 @@
+#par1 {
+  background-color: red;
+}
+#par2 {
+  background-color: rgb(0, 255, 0);
+}
+#par3 {
+  background-color: rgb(0, 0, 255);
+}
+#par4 {
+  /* hue= 0'dan 360 dereceye kadar tekrar eden renk paleti 
+   0=kırmızı
+   120= yeşil
+   240= mavi*/
+  background-color: hsl(240, 50%, 50%);
+}
+#par5 {
+  background-color: #ff0000;
+}
+#par6 {
+  background-color: #ff1085;
+}

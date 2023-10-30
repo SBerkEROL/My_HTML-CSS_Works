@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+}
+
+/* body {
+  margin: 16px;
+} */
+
+h1 {
+  background-color: crimson;
+
+  /* 4 taraftan 100px boşluk açtı */
+  margin-top: 100px;
+}
+
+#par1 {
+  background-color: olive;
+
+  /* yukarı-sağ-aşağı-sol */
+  /* margin: 50px 10px 25px 90px; */
+
+  /* margin:auto; = block elementlerde çalışır!!!!!!!!!!!!!!!!!!!!!!(renk verdiğimde arka plan komple boyanıyor demek ki block element) */
+  /* margin auto genişlik vermezsek çalışmaz örneğin with= 50% yapmazsak zaten ekranın yanlamasına tamamını kaplıyor nasıl ortalyacak? */
+  /* margin: auto; */
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+
+  /* içeriğin sağdan soldan yukarıdan aşağıdan 20px içeri konumlanmasını sağladık */
+  padding: 20px;
+
+  /* padding ile verilen içerik aşağı doğru kaydığı için sağ tarafa scrolling ekledik */
+  overflow: auto;
+
+  /* 5px =  genişliği,  solid = düz çizgi mi olsun kesikli mi olsun vb. */
+  border: 5px solid blue;
+
+  /* kutumun sınırlarını sabit tut  */
+  box-sizing: border-box;
+
+  /* content-box içerik aldıkça kutumun büyüklüğünü ona göre ayarla */
+}
+
+#par2 {
+  background-color: magenta;
+  margin-bottom: 0;
+}
+
+#link {
+  background-color: blue;
+
+  /* display:block; yaparak #link'i block haline getirdik diğer türlü ortalayamazdık çünkü kendi kadar yer kaplıyordu nasıl ortalayacaktık?*/
+  display: block;
+
+  /* %30'luk bir genişlik verdik */
+  width: 30%;
+
+  /* ekranda ortalanmasını sağladık çünkü artık block element */
+  /* maargin:auto; beni ortala demek. block element'i alarak sağdaki soldaki boşlukları kullanıyor ve kendisini ortalıyor*/
+  margin: auto;
+
+  /* mavi alan içerisinde yazıyı ortala demek */
+  text-align: center;
+
+  color: white;
+
+  /* yazının altındaki çizgiyi kaldırmak için kullanılır */
+  text-decoration: none;
+}
+
+.container {
+  background-color: orange;
+
+  /************* margin collapsing **************/
+  /* h1 ile container ayrılması için yaptık diğer türlü hata olup container h1'den itibaren başlıyordu */
+  border: 1px solid blue;
+  margin: 50px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>INTRO</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      /* ONCELIK INLINE DAHA SONRA KODLAR YUKARIDAN ASAGIYA OKUDUGU ICIN HANGISI ASAGIDAYSA ONU BAZ ALIR */
+      /* class oldugunda '.' konur */
+      /* id oldugunda '#' konur */
+      #par2 {
+        background-color: sienna;
+      }
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Intro</h1>
+
+    <p id="par1" style="background-color: blueviolet">INLINE CSS</p>
+    <p id="par2">Internal CSS</p>
+    <p id="par3">External CSS</p>
+
+    <!-- aynı css özelliklerini verecegimiz icin id degil class tanımlanır -->
+    <!-- class'lar ve id'ler arasında yazma sırasına göre üstünlük yok id'ler her zaman ustundur  -->
+    <!-- 2. paragraf'da farklı özellik vermek için id tanımladık(style.css) -->
+    <p class="ortak">Lorem ipsum dolor sit amet consectetur.</p>
+    <p id="paragraf2" class="ortak">Lorem ipsum dolor sit amet consectetur.</p>
+    <p class="ortak">Lorem ipsum dolor sit amet consectetur.</p>
+    <p class="ortak">Lorem ipsum dolor sit amet consectetur.</p>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline-Internal Css</title>
+
+    <style>
+      img {
+        width: 300px;
+        height: 300px;
+
+        /* solid = çerçeveyi kalın yapar*/
+        border: 5px solid blueviolet;
+
+        /* çerçeveyi ovalleştirir */
+        border-radius: 50%;
+
+        /* sayfanın yarısını kaplar
+        width: 50%; */
+
+        /* fotoğrafları yuvarlak yapmak için
+        width: 300px;
+        height: 300px;
+        border: 10px solid blue;
+        border-radius: 50%; */
+      }
+
+      .img-div {
+        border: 2px solid red;
+        text-align: center;
+        background-color: bisque;
+      }
+
+      #par {
+        background-color: crimson;
+        font-family: "Courier New", Courier, monospace;
+        text-align: justify;
+        font-weight: 900;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="color: red; text-align: center">Using Css</h1>
+    <p style="background-color: chocolate">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate harum
+      deserunt aut voluptatibus officia excepturi iste sint, impedit velit ipsum
+      aliquid perferendis non delectus ut corporis consectetur corrupti
+      praesentium. Dolorem?
+    </p>
+
+    <div class="img-div">
+      <img
+        src="https://media.istockphoto.com/id/1297921250/nl/foto/berglandschap-met-het-oog-op-een-dorp-in-de-vallei.jpg?s=2048x2048&w=is&k=20&c=PKGakKyxrDKbod9GvTfFflsKiA-soA6bJBVhGEC225Y="
+        alt=""
+      />
+
+      <img
+        src="https://media.istockphoto.com/id/181528464/nl/foto/mountain-landscape.webp?s=2048x2048&w=is&k=20&c=6aM6KEw6c4yoxux4h0Z5RLu1u5ASDD9mcNlxhoQpQeY="
+        alt=""
+      />
+    </div>
+
+    <div id="par">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, eius?
+      Dolore, sed? Magni, vero. Aspernatur vel cupiditate eveniet fugiat saepe
+      odio laborum perferendis laudantium incidunt, quos dicta corrupti deserunt
+      ducimus?
+    </div>
+  </body>
+</html>

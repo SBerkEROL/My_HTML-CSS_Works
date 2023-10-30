@@ -1,0 +1,39 @@
+#par1 {
+  border: 3px dotted red;
+}
+
+#par2 {
+  border-width: 5px;
+  border-style: solid;
+  border-color: blue;
+
+  /* ekranın yarısını kapsasın */
+  width: 50%;
+
+  /* ekranı ortalasın */
+  margin: auto;
+
+  /* border içerisindeki yazı 4 yönden de 10px boşluk açsın */
+  padding: 50px;
+
+  /* 10px'lik ovalleşme-yuvarlaklık olsun, genişlik ve yükseklik aynı olursa örneğin 200px border-radius 50% yaptığında tam yuvarlak olur */
+  border-radius: 10px;
+
+  /* border: 5px solid blue; =  aşağıdaki kodlar bunun aynısı ama tek tek yazılmış 
+  border-width: 5px;
+  border-style: solid;
+  border-color: blue;
+  */
+}
+
+#par3 {
+  border: 2px double magenta;
+}
+
+#par4 {
+  border: 10px dashed orange;
+}
+
+#par5 {
+  border: 6px inset red;
+}

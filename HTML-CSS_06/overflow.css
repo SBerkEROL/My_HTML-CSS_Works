@@ -1,0 +1,43 @@
+.box {
+  border: 5px solid olive;
+  margin-bottom: 4rem;
+  width: 20rem;
+  height: 4rem;
+  background-color: bisque;
+}
+
+.box1 {
+  /* default ozellik */
+  overflow: visible;
+}
+.box2 {
+  /* tasmalari gizledi ama scroll yapamıyoruz */
+  overflow: hidden;
+}
+.box3 {
+  /* scroll ekledi. bunu x veya y ekseninde olarak belirleyebilirim */
+  overflow: scroll;
+}
+.box4 {
+  /* icerik eger tasiyorsa scroll verir tasmiyorsa visible verir */
+  overflow: auto;
+}
+
+/* box4'deki scroll'u gizlemek(asagi kaymaya devam eder) */
+.box4::-webkit-scrollbar {
+  /* yontem1 */
+  width: 0;
+  /* yontem2 */
+  display: none;
+  /* yontem3 */
+  visibility: hidden;
+}
+.box5 {
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.paragraf {
+  background-color: brown;
+  width: 50rem;
+}

@@ -1,0 +1,53 @@
+* {
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+header {
+  background-color: seagreen;
+  margin-top: 10px;
+}
+
+main {
+  background-color: skyblue;
+  padding: 5px;
+}
+
+aside {
+  background-color: darkgoldenrod;
+  width: 25%;
+  height: 300px;
+
+  /* aside'i solda birak sonraki icerigi yanına getir */
+  float: left;
+}
+
+article {
+  background-color: greenyellow;
+  width: 70%;
+  height: 300px;
+
+  float: left;
+}
+
+/* bunun yerine alt tarafta gosterilen clearfix uygulamak daha dogru */
+.clear {
+  /* floatdan kaynaklanmis bozulmusluklari ortadan kaldir */
+  clear: both;
+}
+
+/******************** clearfix ********************/
+.clearfix::after {
+  /* bos div ile aynı sey */
+  content: "";
+  /* bos content'in her iki tarafini clear yap */
+  clear: both;
+  /* clear sadece block elementlerde calisiyor o yuzden block element yaptik */
+  display: block;
+}
+/******************** clearfix ********************/
+
+footer {
+  background-color: coral;
+}

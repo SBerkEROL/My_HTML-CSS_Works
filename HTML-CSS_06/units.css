@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* tarayicinin gorunen kisminin %30'u kadarini yukseklik verdim */
+  height: 30vh;
+}
+.abs {
+  background-color: chocolate;
+
+  /* responsive tasarimlara uygun olsun diye genelde REM-EM gibi ölcü birimleri tercih edilir */
+  width: 500px;
+  width: 4in;
+  width: 10cm;
+}
+
+.div2 {
+  background-color: blue;
+  width: 50%;
+
+  /* body'e tarayicinin gorunen kisminin %30'unu yukseklik olarak vermistik div2'de body'e verilen yuksekligin tamamini aldi*/
+  height: 100%;
+}
+.div3 {
+  background-color: chocolate;
+  width: 50%;
+}
+.div4 {
+  background-color: gold;
+
+  /* tarayicinin gorunen alaninin yarisi kadar */
+  /* artık parent'lerine bagli degil!!!!!!!!! */
+  width: 50vw;
+}
+
+.div5 {
+  font-size: 25px;
+}
+.div6 {
+  font-size: 2em;
+}
+.div7 {
+  font-size: 3em;
+}
+.div8 {
+  font-size: 25px;
+}
+
+.div9 {
+  font-size: 2rem;
+}
+
+.div10 {
+  font-size: 3rem;
+}

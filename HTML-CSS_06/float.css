@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.img-float {
+  width: 40%;
+  float: left;
+}
+.par1 {
+  background-color: blue;
+}
+
+/* resmin yanindan baslamamasi icin bos div acip float:left'i bozduk */
+/* .clear {
+  clear: left;
+} */
+
+/* resmin yanindan baslamamasi icin alttaki paragrafa clear:left yaptik */
+.par2 {
+  clear: left;
+  background-color: aqua;
+}
+
+.container {
+  /* border: 5px solid yellow; */
+  margin-top: 30px;
+}
+.box {
+  font-size: 2rem;
+  /* solda kal senden sonraki sağından devam etsin */
+  float: left;
+}
+.box1 {
+  background-color: green;
+  /* solda kal senden sonraki sağından devam etsin */
+  /* float: left; */
+
+  /* sayfanin %33'unu kapla */
+  width: 40%;
+
+  height: 20vh;
+
+  background-image: url("https://picsum.photos/id/684/600/400");
+  background-size: contain;
+}
+
+.box2 {
+  background-color: fuchsia;
+  /* float: left; */
+
+  /* sayfanin %33'unu kapla */
+  width: 20%;
+
+  height: 40vh;
+
+  /* background-image: url("https://picsum.photos/id/123/600/400");
+
+  background-size: contain; */
+
+  font-size: 0.5rem;
+}
+
+.box3 {
+  background-color: blue;
+  /* float: left; */
+
+  /* sayfanin %33'unu kapla */
+  width: 40%;
+
+  height: 50vh;
+
+  background-image: url("https://picsum.photos/id/231/600/400");
+
+  background-size: cover;
+  background-position: center;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+    <style>
+      a {
+        background-color: aqua;
+        /* display: inline-block; */
+        margin: 25px;
+        padding: 40px;
+
+        /* width'i kabul etmez cunku inline element */
+        width: 400px;
+      }
+      button {
+        /* padding ve width yer cunku inline block */
+        width: 300px;
+        /* padding: 55px; */
+      }
+      span {
+        background-color: orange;
+        display: block;
+
+        /* block element yaptıgimiz icin artik margin ald */
+        margin: 55px;
+      }
+      .box {
+        background-color: crimson;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+
+        /* inline block yaptigimiz icin yanda yer oldugu surece yan yana yazdirir yanda yer yoksa alta atar */
+        display: inline-block;
+      }
+      #box2 {
+        background-color: darkorange;
+        /* display: none; */
+
+        /* gorunurlugunu kaldirir */
+        visibility: hidden;
+      }
+      #box5 {
+        background-color: olive;
+
+        /* tamamen kaldirir */
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!------------- inline elements ------------->
+
+    <a href="">Clarusway</a>
+    <button>Clarusway</button>
+    <span>Hello my name is span</span>
+
+    <!------------- block elements ------------->
+
+    <div class="box">box1</div>
+    <div class="box" id="box2">box2</div>
+    <div class="box">box3</div>
+    <br />
+    <div class="box">box4</div>
+    <div class="box" id="box5">box5</div>
+    <div class="box">box6</div>
+  </body>
+</html>

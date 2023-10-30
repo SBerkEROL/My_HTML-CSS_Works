@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/*! Header */
+/* Start */
+/* ----------------------- */
+
+header {
+  background: #dbe6f6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #c5796d,
+    #dbe6f6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #c5796d,
+    #dbe6f6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /* icerisini acmak icin ic hacim verdim */
+  padding: 1rem;
+}
+
+header a img {
+  width: 60px;
+}
+
+header .sign-in {
+  /* linkleri saga gonderdim */
+  float: right;
+
+  /* ortalamak icin yukarıdan padding verdim */
+  padding-top: 1.5rem;
+
+  /* sagdan bosluk actim */
+  padding-right: 0.5rem;
+
+  /* colorzilla ile elde eddigim renk'i login'den sonraki duz cizgiye verdim */
+  color: #920101;
+}
+
+header .sign-in a {
+  color: #920101;
+
+  /* login-register altindaki cizgileri kaldirdim */
+  text-decoration: none;
+}
+header .sign-in a:hover {
+  /* yazinin ustune geldigimizde cizgi olsun diye yaptim ama projede alta gelen cizgi daha asagidan geliyor */
+  /* text-decoration: underline; */
+
+  /* cizginin daha asagidan olması icin bunu yaptim */
+  border-bottom: 2px solid #920101;
+}
+/* End */
+/* ----------------------- */
+
+/*! NAV STICKY */
+/* Start */
+/* ----------------------- */
+
+/* nav class'i sticky olan */
+nav.sticky {
+  padding: 2rem;
+
+  /* cssbackground'dan aldigim kod */
+  background: #dce35b;
+  background: -webkit-linear-gradient(to right, #45b649, #dce35b);
+  background: linear-gradient(to right, #45b649, #dce35b);
+  text-align: center;
+
+  /* stick= navbar'in sayfayla birlikte asagi inmesi */
+  position: sticky;
+  top: 0;
+  /* bir ust katmana cikardik asagi inerken digerlerinin altinda kalmasin diye
+   */
+  z-index: 1;
+}
+
+nav.sticky a {
+  color: black;
+  font-family: "DynaPuff", cursive;
+  text-decoration: none;
+
+  /* aralarini acmak icin */
+  margin-right: 0.8rem;
+}
+
+nav.sticky a:hover {
+  color: white;
+}
+/* End */
+/* ----------------------- */
+
+/*! NAV BANNER */
+/* Start */
+/* ----------------------- */
+nav.banner {
+  position: relative;
+
+  /* satirlarin arasini acmaya yarar */
+  line-height: 3rem;
+}
+nav.banner img {
+  width: 100%;
+
+  /* ekranın %100'unden 202px(header+navbar) cikardik bu sayede fotograf ekran ne kadar buyurse buyusun ekranin tamami-202px'den fazla buyumedi*/
+  max-height: calc(100vh-202px);
+}
+nav.banner .hi {
+  /* banner'in icerisine konumlandirmak icin akistan cikardim */
+  /* fotografin icerisine almak icin fotografa(banner) "position:relative" vermek lazım */
+  position: absolute;
+
+  /* ortalamak icin top-left 50% verdik ama ortalanmak istenen seyin sol ust kosesine gore ortalama yapar. tam ortalama yapmak icin "transform: translate(-50%,-50%);" yapmak lazim*/
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+
+  top: 30%;
+  left: 10%;
+}
+
+nav.banner .hi h2 {
+  color: white;
+  font-size: 3rem;
+  text-shadow: 0px 3px 5px black;
+}
+nav.banner .hi h3 {
+  color: rgb(228, 11, 11);
+  font-size: 1rem;
+  text-shadow: 0px 3px 5px black;
+}
+
+nav.banner button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 15px;
+  font-weight: 750;
+  background-color: #d9afd9;
+}
+nav.banner button:hover {
+  opacity: 0.5rem;
+  /* ustune gelince mouse degisecek */
+  cursor: pointer;
+}
+/* End */
+/* ----------------------- */
+
+/*! MAIN */
+/* Start */
+/* ----------------------- */
+main {
+  padding: 2rem;
+  text-align: justify;
+}
+/* End */
+/* ----------------------- */
+
+/*! SECTION */
+/* Start */
+/* ----------------------- */
+.slack1 {
+  font-size: 3rem;
+
+  /* sag asagida sabitleyip sayfa kaydikca kaydirmak icin */
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+
+  background-color: #920101;
+  /* inline-block oldugu icin genislik ve yukseklik verebirim */
+  width: 4rem;
+  height: 4rem;
+
+  color: whitesmoke;
+  text-align: center;
+
+  border-radius: 50%;
+}
+
+.slack1:hover {
+  cursor: pointer;
+
+  /* ustune gelindigi zaman etrafinda cember cikicak */
+  outline: 2px solid #920101;
+  /* cemberi biraz daha disari konumlandirdim */
+  outline-offset: 4px;
+
+  color: rgb(0, 0, 0);
+}
+
+/* End */
+/* ----------------------- */

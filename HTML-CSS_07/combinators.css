@@ -1,0 +1,89 @@
+/* div'in icerisindeki p'ler */
+div p {
+  /* background-color: olive; */
+}
+
+/* container icerisindeki div'in icerisindeki p */
+.container div p {
+  /* background-color: magenta; */
+}
+
+/* p'den hemen sonra gelen div(paragraf 2'den sonra gelen div yani box) */
+p + div {
+  /* background-color: blue; */
+}
+
+/* div'den sonra gelen p (container'dan)*/
+div + p {
+  /* background-color: orange; */
+}
+
+/* divden sonra gelen tüm p'ler */
+div ~ p {
+  background-color: gray;
+}
+
+/* title'i paragraf1 olan h2'yi sec */
+h2[title="baslik1"] {
+  background-color: darkgoldenrod;
+}
+
+p[title="paragraf2"] {
+  background-color: rgba(35, 94, 142, 0.654);
+}
+
+/* target="_blank" olan a'yi sec */
+a[target="_blank"] {
+  background-color: rgb(182, 234, 9);
+}
+
+/********** OUTLINE **********/
+.out {
+  border: 2px solid red;
+  width: 8rem;
+  height: 8rem;
+  /* yukaridaki olculer icerisine sigsin diye yazi boyutunu kuculttuk */
+  font-size: 1rem;
+  border-radius: 50%;
+  text-align: center;
+
+  /* padding top ile yukaridan asagiya dogru inmesini sagladik icerigin */
+  /* border-box yaparak da cember'in bozulmamasini sagladik */
+  padding-top: 3rem;
+  box-sizing: border-box;
+
+  /* sayfanin ortasina getirdik */
+  margin: auto;
+}
+
+.out:hover {
+  outline: 5px dashed purple;
+
+  /* mouse'in imgesini pointer yaptik */
+  cursor: pointer;
+
+  /* uzaklastirdik */
+  outline-offset: 0.5rem;
+}
+.brk {
+  border: 5px solid red;
+  background-color: orange;
+  /* block elementlerde yaziyi ortalamak icin  */
+  text-align: center;
+
+  /* genisligini dusurduk ki ortalayabilelim */
+  width: 20rem;
+  /* ortaladik yukariya birlesik olamamasi icin de 10px verdik */
+  margin: 50px auto;
+
+  /* sol ust koseyi yuvarlaksir */
+  border-top-left-radius: 1rem;
+
+  /* sag alt koseyi yuvarlaksir */
+  border-bottom-right-radius: 1rem;
+
+  /* border etrafindaki cizgi */
+  outline: 10px outset purple;
+  /* borderdan uzaklastirdik */
+  outline-offset: 0.5rem;
+}

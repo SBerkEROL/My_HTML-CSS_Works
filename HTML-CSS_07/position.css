@@ -1,0 +1,94 @@
+.main {
+  background-color: rgba(229, 229, 19, 0.72);
+  width: 90%;
+  height: 2000px;
+  padding: 5px;
+  margin: 10px;
+  margin-top: 50px;
+
+  /* main icerisindeki boxlarin main icerisinde konumlanmasini saglamak icin position:relative verdik. eger bunu yapmazsak body'ye gore konumlanacaklar */
+  position: relative;
+}
+
+.box1 {
+  background-color: rgba(0, 0, 255, 0.513);
+  width: 100px;
+  height: 100px;
+}
+.box2 {
+  background-color: rgba(255, 0, 255, 0.454);
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+  /* ilk konumunu koruyarak degisiklik yapar akistaki diger elemanların pozisyonunu etkilemez */
+  /* position: relative; */
+
+  /* asagi 10px saga 20px kaydir */
+  /* top: 10px;
+  left: 20px; */
+}
+.icerde {
+  background-color: yellow;
+  width: 50px;
+  height: 50px;
+
+  /* parent'da(box2) position:relative buldugu icin ona gore konum aldi bulamasaydi main'e bakıcaktı onda da olmazsa body'ye gore konum alacakti */
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.box3 {
+  background-color: rgba(128, 128, 0, 0.529);
+  width: 100px;
+  height: 100px;
+
+  /* akistan cikar bir alttaki element onun pozisyonuna gelir */
+  /* position: absolute == akistan cik demek kisaca */
+  /* position:absolut, parant'inda position:relative arar eger bulamazsa bir ustte arar derken en son body'ye gore konum alir */
+  position: absolute;
+
+  /* sag uste konumlan dedik ama main'e position:relative vermezsek eger body'nin sag ustune konumlanir */
+  top: 0px;
+  right: 0px;
+}
+
+.box4 {
+  background-color: rgba(255, 0, 0, 0.785);
+  width: 100%;
+  height: 100px;
+  border-radius: 20px;
+  text-align: center;
+  color: whitesmoke;
+
+  /* paragraf2'yi uste cikarmak icin buna 1 paragraf 2'ye 2 verdik */
+  z-index: 1;
+
+  /* akistan cikti, sayfada nereye konumlandirirsak oraya konumlanir */
+  position: fixed;
+
+  /* sag uste gorunen alanin %10 altina gel */
+  left: 0px;
+  top: 0%;
+}
+
+.paragraf2 {
+  background-color: magenta;
+  padding: 10px;
+  border-radius: 20px;
+  position: sticky;
+
+  /* navbar'in uzunlugu 100px o yuzden tam altinda olması icin 100px top verdik */
+  top: 100px;
+
+  /* paragraf2'yi uste cikarmak z index 2 verdik(box4 z index 1)  */
+
+  z-index: 2;
+}
+
+/* paragraf2'yi container icine alirsak eger sticky oldugu icin container bitene kadar devam eder */
+.container {
+  border: 2px solid blue;
+  padding: 20px;
+  height: 400px;
+}

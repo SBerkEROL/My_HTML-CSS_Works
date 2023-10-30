@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 1rem;
+  height: 100vh;
+}
+/**************** ROW *****************/
+/********** Yatayda ORTALAMAK icin "justify-content:center"  **********/
+/********** Dikeyde ORTALAMAK icin "align-items: center;"  **********/
+
+/**************** COLUMN *****************/
+/********** Yatayda ORTALAMAK icin "align-items: center;" **********/
+/********** Dikeyde ORTALAMAK icin "justify-content:center" **********/
+ul {
+  background-color: purple;
+  list-style-type: none;
+  padding: 1rem 0;
+
+  /* block elemanlar inline-block gibi yan yana geldi, artik flex ozelliklerini kullanabilirim*/
+  display: flex;
+
+  /* yan yana gelmeleri icin row  */
+  flex-direction: row;
+
+  /* ust uste gelmeleri icin column */
+  /* flex-direction: column; */
+
+  /* tersten siralama */
+  /* flex-direction: row-reverse; */
+
+  /* yatayda ve dikeyde fark etmez elemanlarin arasini ac */
+  /* 1rem satirlar arasi bosluk, 5 rem sutunlar arasi bosluk */
+  /* gap: 1rem 5rem; */
+
+  gap: 1rem;
+
+  /* ekrani kuculttukce yer kalmazsa elemanlar asagiya dogru duser bunu yapmamak istenen bir sey degil cunku container disina tasar */
+  flex-wrap: wrap;
+
+  /* icerigi ortalar */
+  /* justify-content: center; */
+
+  /* icerigi saga yaslar */
+  /* justify-content: flex-end; */
+
+  /* bastaki ve sondaki elemanlari en saga,en sola yaslar */
+  /* justify-content: space-between; */
+
+  /* basta ev sonda 1 birim geri kalanlara 2 birim bosluk birakir */
+  /* justify-content: space-around; */
+
+  /* hepsinin arasini esit olarak acar */
+  /* justify-content: space-evenly; */
+
+  /* ****************** */
+  /* height: 70%; */
+
+  /* default ozellik */
+  /* align-items: stretch; */
+
+  /* yukaridan asagidan ortalar */
+  /* align-items: center; */
+
+  /* en yukarı alır */
+  /* align-items: flex-start; */
+
+  /* en asagi alir */
+  /* align-items: flex-end; */
+
+  /* dikeyde ortalamak icin */
+  /* align-items: center; */
+
+  align-items: baseline;
+  justify-content: center;
+
+  /* justify-content: center; */
+
+  /***** align-content: ;Hepsini butun olarak dusunmemiz lazım ******/
+  /* block sutun olarak yukari tasidi */
+  /* align-content: flex-start; */
+
+  /* block sutun olarak asagi tasidi */
+  /* align-content: flex-end; */
+}
+
+/* ul'nin icerisindeki her elemana */
+ul * {
+  background-color: blueviolet;
+}
+
+ul li {
+  padding: 1rem;
+  border-radius: 15px;
+  width: 200px;
+}
+
+/****** Container ******/
+.container {
+  margin-top: 100px;
+  background-color: aqua;
+  padding: 1rem;
+  /* flex container seviyesinde verilir(parent) */
+  display: flex;
+  /* aralarini actim */
+  gap: 1rem;
+  /* bu ozelligi acmazsam ekran buyuyup kuculunca divleri asagi atmaz hepsi ayni satirda kalir */
+  flex-wrap: wrap;
+}
+
+.container * {
+  background-color: yellow;
+}
+
+.container header {
+  /* kalan bosluklarin 100% kaplar digerlerini asagi atar */
+  flex-basis: 100%;
+
+  /* kalan bosluklari al demek ama "aside" ya da bir baska div'e ayni ozelligi verirsek kalan bosluklari bolusurler */
+  /* bunu yaptigimizde digerlerini asagi atmaz flex-basisdeki gibi */
+  /* flex-grow: 1; */
+}
+.container aside {
+  /* flex-basis: 33%; */
+
+  /* kalan boslugun 2'sini aldi */
+  flex-grow: 2;
+}
+.container main {
+  /* flex-basis: 30%; */
+  flex-grow: 5;
+}
+.container article {
+  /* flex-basis: 30%; */
+  flex-grow: 2;
+}
+.container footer {
+  flex-basis: 100%;
+}
